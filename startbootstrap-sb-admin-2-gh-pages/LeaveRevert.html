@@ -84,7 +84,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Self-services</h6>
                         <a class="collapse-item" href="LeaveRequest.html">Request - Leaves</a>
-                        <a class="collapse-item" href="LeaveRevert.html">Reverts - Leaves</a>
+                        <a class="collapse-item" href="LeaveRevert.html">Pullback - Leaves</a>
                     </div>
                 </div>
             </li>
@@ -402,7 +402,7 @@
             <li class="breadcrumb-item">
                 <a href="index.html">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Apply Leave</li>
+            <li class="breadcrumb-item active" aria-current="page">Pullback Leave request</li>
         </ol>
     </nav> 
     <!--breadcrum end-->
@@ -415,7 +415,7 @@
                     <div class="row">
                         <div class="col-12" >
                             <div class="form-group pmd-textfield pmd-textfield-floating-label ">
-                                <label for="leave-type">Leave Type</label>
+                                <label for="leave-type">Leave Type<span style="color:red">*</span></label>
                                 <select name="leave-type" id="leave-type" class="form-control"  title="Please select a Leave Type" required>
                                     <option></option>
                                     <option>EL - Sick Leave</option>
@@ -436,7 +436,7 @@
                         </div>
                         <div class="col-12">
                             <div class="form-group pmd-textfield pmd-textfield-floating-label">
-                                <label>Reason</label>
+                                <label>Reason<span style="color:red">*</span></label>
                                 <textarea class="form-control" id="reason" name="reason"></textarea>
                             </div>
                         </div>
@@ -445,17 +445,19 @@
                 </div>
                 <!--<h4>Select your leaves from Calendar</h4> -->
                 <div>
-                    <div Class = "col-2"> Select Day(s)</div>
+                    <div Class = "col-2"> Select Day(s)<span style="color:red">*</span></div>
                     <div id="picker" Class = "col-12"></div>
                     
                 </div>
                 <div class="card-footer">
                     <div Class = "col-6">
-                        <p>Selected dates / times:</p>
+                        <p>Selected dates :</p>
                         <div id="selected-dates"></div>
                     </div>
                     <div Class = "col-12">
-                        <button type="submit" class="btn btn-primary pmd-ripple-effect pmd-btn-raised" name="applyleave" value="Apply Leave">Apply Leave</button> <button type="reset"  class="btn btn-outline-secondary pmd-ripple-effect">Reset</button>
+                        <button type="submit" class="btn btn-primary pmd-ripple-effect pmd-btn-raised" name="applyleave" value="Pullback Leave"> <a class="dropdown-item" href="#" data-toggle="modal" data-target="#subModal">
+                            Pullback Leave
+                       </a></button> <button type="reset"  class="btn btn-outline-secondary pmd-ripple-effect">Reset</button>
                     </div>
                 </div>
             </form>
@@ -466,7 +468,26 @@
 </div>
                 <!-- Begin Page Content -->
                  
-                    
+               
+               
+                <div class="modal fade" id="subModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Select "Sumbit" below if you are ready to cancel your leave.</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="LeaveRequest.html">Submit</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
                     
                    
                  <!-- /.container-fluid -->

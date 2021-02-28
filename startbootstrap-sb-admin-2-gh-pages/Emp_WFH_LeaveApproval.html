@@ -71,7 +71,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index Manager.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -95,7 +95,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Self-services</h6>
                         <a class="collapse-item" href="LeaveRequest.html">Request - Leaves</a>
-                        <a class="collapse-item" href="LeaveRevert.html">Reverts - Leaves</a>
+                        <a class="collapse-item" href="LeaveRevert.html">Pullback - Leaves</a>
                     </div>
                 </div>
             </li>
@@ -368,7 +368,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Raj</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Manager</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -411,9 +411,9 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb pmd-breadcrumb mb-0">
             <li class="breadcrumb-item">
-                <a href="index.html">Dashboard</a>
+                <a href="index Manager.html">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">Leave request</li>
+            <li class="breadcrumb-item active" aria-current="page">Work From Home request</li>
         </ol>
     </nav>
     <!--breadcrum end-->
@@ -437,6 +437,100 @@
                 <tbody>
                     <tr>
                         <td data-title="Employee">Suresh</td>
+                        <td data-title="Leave Type">Work From Home</td>
+                        <td data-title="Half Day">No</td>
+                        <td data-title="Start Date">21<sup>st</sup> April, 2021</td>
+                        <td data-title="End Date">21<sup>st</sup> April, 2021</td>
+                        <td data-title="Reason">Due to the heavy rains</td>
+                        <td data-title="No of Leave">3</td>
+                        <td data-title="Paid / WFH">WFH</td>
+                        <td data-title="Status">Pending</td>
+                        <td data-title="">
+                            <a href="javascript:void(0);" title="Accept" class="pmd-btn-fab btn-xs btn-outline-secondary btn mr-2 pmd-ripple-effect">
+                                <i class="material-icons">done</i>
+                            </a>
+                            <a href="javascript:void(0);" title="Reject" class="pmd-btn-fab btn-xs btn-outline-danger btn pmd-ripple-effect" data-toggle="modal" data-target="#reject-modal">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title="Employee">Ramesh</td>
+                        <td data-title="Leave Type">Work From Home</td>
+                        <td data-title="Half Day">No</td>
+                        <td data-title="Start Date">1<sup>st</sup> March, 2021</td>
+                        <td data-title="End Date">3<sup>rd</sup> March, 2021</td>
+                        <td data-title="Reason">Due to Covid19 </td>
+                        <td data-title="No of Leave">3</td>
+                        <td data-title="Paid / Work From Home">WFH</td>
+                        <td data-title="Status">Pending</td>
+                        <td data-title="">
+                            <a href="javascript:void(0);" title="Accept" class="pmd-btn-fab btn-xs btn-outline-secondary btn mr-2 pmd-ripple-effect">
+                                <i class="material-icons">done</i>
+                            </a>
+                            <a href="javascript:void(0);" title="Reject" class="pmd-btn-fab btn-xs btn-outline-danger btn pmd-ripple-effect" data-toggle="modal" data-target="#reject-modal">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title="Employee">Nagesh</td>
+                        <td data-title="Leave Type">Work From Home</td>
+                        <td data-title="Half Day">No</td>
+                        <td data-title="Start Date">1<sup>st</sup> February, 2021</td>
+                        <td data-title="End Date">3<sup>rd</sup> February, 2021</td>
+                        <td data-title="Reason">Quarantine rules</td>
+                        <td data-title="No of Leave">3</td>
+                        <td data-title="Paid / Unpaid">WFH</td>
+                        <td data-title="Status">Pending</td>
+                        <td data-title="">
+                            <a href="javascript:void(0);" title="Accept" class="pmd-btn-fab btn-xs btn-outline-secondary btn mr-2 pmd-ripple-effect">
+                                <i class="material-icons">done</i>
+                            </a>
+                            <a href="javascript:void(0);" title="Reject" class="pmd-btn-fab btn-xs btn-outline-danger btn pmd-ripple-effect" data-toggle="modal" data-target="#reject-modal">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title="Employee">Naresh</td>
+                        <td data-title="Leave Type">Work From Home</td>
+                        <td data-title="Half Day">Yes</td>
+                        <td data-title="Start Date">1<sup>st</sup> February, 2021</td>
+                        <td data-title="End Date">1<sup>st</sup> February, 2021</td>
+                        <td data-title="Reason">Due to COVID19</td>
+                        <td data-title="No of Leave">0.5</td>
+                        <td data-title="Paid / Unpaid">WFH</td>
+                        <td data-title="Status">Pending</td>
+                        <td data-title="">
+                            <a href="javascript:void(0);" title="Accept" class="pmd-btn-fab btn-xs btn-outline-secondary btn mr-2 pmd-ripple-effect">
+                                <i class="material-icons">done</i>
+                            </a>
+                            <a href="javascript:void(0);" title="Reject" class="pmd-btn-fab btn-xs btn-outline-danger btn pmd-ripple-effect" data-toggle="modal" data-target="#reject-modal">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title="Employee">Ramesh</td>
+                        <td data-title="Leave Type">Work From Home</td>
+                        <td data-title="Half Day">No</td>
+                        <td data-title="Start Date">1<sup>st</sup> February, 2021</td>
+                        <td data-title="End Date">3<sup>rd</sup> February, 2021</td>
+                        <td data-title="Reason">Vacation with Family</td>
+                        <td data-title="No of Leave">3</td>
+                        <td data-title="Paid / Unpaid">WFH</td>
+                        <td data-title="Status">Pending</td>
+                        <td data-title="">
+                            <a href="javascript:void(0);" title="Accept" class="pmd-btn-fab btn-xs btn-outline-secondary btn mr-2 pmd-ripple-effect">
+                                <i class="material-icons">done</i>
+                            </a>
+                            <a href="javascript:void(0);" title="Reject" class="pmd-btn-fab btn-xs btn-outline-danger btn pmd-ripple-effect" data-toggle="modal" data-target="#reject-modal">
+                                <i class="material-icons">close</i>
+                            </a>
+                        </td>
+                    </tr>
+                    <td data-title="Employee">Suresh</td>
                         <td data-title="Leave Type">Work From Home</td>
                         <td data-title="Half Day">No</td>
                         <td data-title="Start Date">21<sup>st</sup> April, 2021</td>

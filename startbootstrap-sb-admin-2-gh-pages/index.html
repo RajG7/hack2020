@@ -36,7 +36,7 @@
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img class="sidebar-card-illustration mb-2" src="img/colruyt-icon.webp" style="width: 3rem;" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-1">HACK <sup>#2020</sup></div>
+                <div class="sidebar-brand-text mx-1">HRMS <sup>Hack#2020</sup></div>
             </a>
 
             <!-- Divider -->
@@ -68,7 +68,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Self-services</h6>
                         <a class="collapse-item" href="LeaveRequest.html">Request - Leaves</a>
-                        <a class="collapse-item" href="LeaveRevert.html">Reverts - Leaves</a>
+                        <a class="collapse-item" href="LeaveRevert.html">Pullback - Leaves</a>
                     </div>
                 </div>
             </li>
@@ -130,11 +130,7 @@
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -181,7 +177,7 @@
                             </div>
                         </div> 
                     </form>-->
-                        <div id="all_news"> <span id="sp_updates" >Latest Laptops</span>
+                        <div id="all_news"> <span id="sp_updates" >Latest Updates</span>
                             <ul id="ul_updates">
                                 <li id="li_updates"><a href="#">Hey Raj, your leaves are not yet applied for your last vacation</a></li>
                                 <li id="li_updates"><a href="#">Looks like your last month work from home request nont yet approved </a></li>
@@ -239,8 +235,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">February 28, 2021</div>
+                                        <span class="font-weight-bold">Please submit your Payroll before the due date!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -250,8 +246,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        <div class="small text-gray-500">February 26, 2021</div>
+                                        ITR decloration due date : Mar 3rd
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -261,8 +257,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
+                                        <div class="small text-gray-500">December 2, 2020</div>
+                                        Please update your leaves to avoid auto debit.
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
@@ -407,7 +403,7 @@
 
                         <!-- Pending Leaves Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2 card bg-warning text-white shadow">
+                            <a href="Emp_LeavePendings.html"><div class="card border-left-success shadow h-100 py-2 card bg-warning text-white shadow">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -420,12 +416,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
 
                         <!-- Work From Home Applied -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2 card bg-primary text-white shadow">
+                            <a href="Emp_WFHPendings.html"><div class="card border-left-info shadow h-100 py-2 card bg-primary text-white shadow">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -445,12 +441,12 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
 
                         <!-- Pending Requests Card Example -->
                         <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-secondary shadow h-100 py-2 card bg-warning text-white shadow">
+                           <a href="Emp_WFHPendings.html"> <div class="card border-left-secondary shadow h-100 py-2 card bg-warning text-white shadow">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
@@ -463,69 +459,45 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div></a>
                         </div>
+
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <a href="#"> <div class="card border-left-secondary shadow h-100 py-2 card bg-secondary text-white shadow">
+                                 <div class="card-body">
+                                     <div class="row no-gutters align-items-center">
+                                         <div class="col mr-2">
+                                             <div class="text-xs font-weight-bold text-gray-100 text-uppercase mb-1">
+                                                 Upcoming Events</div> 
+                                         </div>
+                                         <div class="col-auto">
+                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div></a>
+                         </div>
+
+                         <div class="col-xl-3 col-md-6 mb-4">
+                            <a href="#"> <div class="card border-left-secondary shadow h-100 py-2 card  bg-info text-white  shadow">
+                                 <div class="card-body">
+                                     <div class="row no-gutters align-items-center">
+                                         <div class="col mr-2">
+                                             <div class="text-xs font-weight-bold text-gray-100 text-uppercase mb-1">
+                                                 Payroll Allowences</div> 
+                                         </div>
+                                         <div class="col-auto">
+                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                         </div>
+                                     </div>
+                                 </div>
+                             </div></a>
+                         </div>
                     </div>
 
                     <!-- Content Row -->
 
-                    <div class="row">
-
-                        <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <!-- Color System -->
-                            <div class="row">
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-primary text-white shadow">
-                                        <div class="card-body">
-                                            Primary
-                                            <div class="text-white-50 small">#4e73df</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-success text-white shadow">
-                                        <div class="card-body">
-                                            Success
-                                            <div class="text-white-50 small">#1cc88a</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-info text-white shadow">
-                                        <div class="card-body">
-                                            Info
-                                            <div class="text-white-50 small">#36b9cc</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
-                                        <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-danger text-white shadow">
-                                        <div class="card-body">
-                                            Danger
-                                            <div class="text-white-50 small">#e74a3b</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-secondary text-white shadow">
-                                        <div class="card-body">
-                                            Secondary
-                                            <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
+                     
  
                 <!-- /.container-fluid -->
 
@@ -552,6 +524,8 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+
+    
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

@@ -9,15 +9,20 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hack#2020 - Dashboard</title>
+    <title>HRMS_Hack#2020-LeavesRollBack</title>
 
-    <!-- Custom fonts for this template -->
+    <!-- Custom fonts  -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> 
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet"> 
+     <!--   <link
+        href="https://themes.propeller.in/bootstrap4/html/bootstrap4-admin-theme/themes/css/bootstrap4-admin-compress.min.css"
+        rel="stylesheet"> -->
 
-    <!-- Custom styles for this template-->
+        
+
+    <!-- Custom styles-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
  
     <link rel="stylesheet" type="text/css" href="css/mark-your-calendar.css"> 
@@ -47,7 +52,7 @@
                     <!-- <i class="fas fa-laugh-wink"></i> -->
                     <img class="sidebar-card-illustration mb-2" src="img/colruyt-icon.webp" style="width: 3rem;" alt="">
                 </div>
-                <div class="sidebar-brand-text mx-1">HACK <sup>#2020</sup></div>
+                <div class="sidebar-brand-text mx-1">HRMS <sup>HACK#2020</sup></div>
             </a>
 
             <!-- Divider -->
@@ -79,7 +84,7 @@
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Self-services</h6>
                         <a class="collapse-item" href="LeaveRequest.html">Request - Leaves</a>
-                        <a class="collapse-item" href="LeaveRevert.html">Reverts - Leaves</a>
+                        <a class="collapse-item" href="LeaveRevert.html">Pullback - Leaves</a>
                     </div>
                 </div>
             </li>
@@ -384,21 +389,114 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                <!-- Begin Page Content -->
-                <div class="container">
-                    <h4>Select your leaves from Calendar</h4>
-                    <div id="picker"></div>
-                    <div>
-                        <p>Selected dates / times:</p>
+    
+<!--content area start-->
+<div id="content" class="pmd-content admin section-container">
+    <!-- Title -->
+   <!--h1 >Apply Leave</h1>--> 
+    <!-- End Title -->
+    
+    <!--breadcrum start-->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb pmd-breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="index.html">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Apply Leave</li>
+        </ol>
+    </nav> 
+    <!--breadcrum end-->
+
+    <div class="page-content" style="background-color: #fafcfd; color:#582323;padding-left:10px;">
+        <!-- Apply Leave Form -->
+        <div class="card pmd-card single-col-form" style="background-color: #f6f9fa; color: #582323;">
+            <form id="apply-leave" method="post" action="">
+                <div class="card-body" style="padding: .5rem">
+                    <div class="row">
+                        <div class="col-12" >
+                            <div class="form-group pmd-textfield pmd-textfield-floating-label ">
+                                <label for="leave-type">Leave Type <span style="color:red">*</span></label>
+                                <select name="leave-type" id="leave-type" class="form-control"  title="Please select a Leave Type" required>
+                                    <option></option>
+                                    <option>EL - Sick Leave</option>
+                                    <option>EL - Casual Leave</option>
+                                    <option>Unpaid Leave</option>
+                                    <option>Work From Home</option> 
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            
+                            <div class="custom-control custom-checkbox pmd-checkbox">
+                                <input class="custom-control-input" type="checkbox" value="" id="inverse_defaultCheck1"/>
+                                <label class="custom-control-label" for="inverse_defaultCheck1">
+                                    Is it a Half Day?
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group pmd-textfield pmd-textfield-floating-label">
+                                <label>Reason <span style="color:red">*</span></label>
+                                <textarea class="form-control" id="reason" name="reason"></textarea>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--<h4>Select your leaves from Calendar</h4> -->
+                <div>
+                    <div Class = "col-2"> Select Day(s) <span style="color:red">*</span></div>
+                    <div id="picker" Class = "col-12"></div>
+                    
+                </div>
+                <div class="card-footer">
+                    <div Class = "col-6">
+                        <p>Selected dates :</p>
                         <div id="selected-dates"></div>
                     </div>
-                  </div>
-                <!-- /.container-fluid -->
+                    <div Class = "col-12">
+                        <button type="submit" class="btn btn-primary pmd-ripple-effect pmd-btn-raised" name="applyleave" value="Apply Leave"><a class="dropdown-item" href="#" data-toggle="modal" data-target="#subModal">
+                             Apply Leave
+                        </a>
+                    </button> <button type="reset"  class="btn btn-outline-secondary pmd-ripple-effect">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!-- content area end -->
+</div>
+                <!-- Begin Page Content -->
+                 
+                
+                <!-- Submit Leaves Modal-->
+                <div class="modal fade" id="subModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">×</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">Select "Apply" below if you are ready to submit your current request.</div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                                <a class="btn btn-primary" href="LeaveRequest.html">Apply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    
+                   
+                 <!-- /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
-            <!-- Footer -->
+            <!-- Footer --> 
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
@@ -443,13 +541,13 @@
         (function($) {
           $('#picker').markyourcalendar({
             availability: [
-              ['1:00'],
-              ['2:00'],
-              ['3:00'],
-              ['4:00'],
-              ['5:00'],
-              ['6:00'],
-              ['7:00']
+              ['Sunday'],
+              ['Monday'],
+              ['Tuesday'],
+              ['Wednesday'],
+              ['Thursday'],
+              ['Friday'],
+              ['Saturday']
             ],
             isMultiple: true,
             onClick: function(ev, data) {
@@ -466,77 +564,78 @@
             onClickNavigator: function(ev, instance) {
               var arr = [
                 [
-                  ['4:00', '5:00'],
-                  ['1:00', '5:00'],
-                  ['2:00', '5:00'],
-                  ['3:30'],
-                  ['2:00', '5:00'],
-                  ['2:00', '5:00'],
-                  ['2:00', '5:00']
+                ['Sun'],
+              ['Mon'],
+              ['Tue'],
+              ['Wed'],
+              ['Thu'],
+              ['Fri'],
+              ['Sat']
                 ],
-                [
-                  ['2:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['2:00', '5:00'],
-                  ['2:00', '5:00'],
-                  ['2:00', '5:00'],
-                  ['2:00', '5:00']
-                ],
-                [
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['3:00', '6:00'],
-                  ['3:00', '6:00'],
-                  ['3:00', '6:00'],
-                  ['3:00', '6:00']
-                ],
-                [
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '5:00']
-                ],
-                [
-                  ['4:00', '6:00'],
-                  ['4:00', '6:00'],
-                  ['4:00', '6:00'],
-                  ['4:00', '6:00'],
-                  ['4:00', '5:00'],
-                  ['4:00', '6:00'],
-                  ['4:00', '6:00']
-                ],
-                [
-                  ['3:00', '6:00'],
-                  ['3:00', '6:00'],
-                  ['3:00', '6:00'],
-                  ['3:00', '6:00'],
-                  ['3:00', '6:00'],
-                  ['4:00', '5:00'],
-                  ['3:00', '6:00']
-                ],
-                [
-                  ['3:00', '4:00'],
-                  ['3:00', '4:00'],
-                  ['3:00', '4:00'],
-                  ['3:00', '4:00'],
-                  ['3:00', '4:00'],
-                  ['3:00', '4:00'],
-                  ['4:00', '5:00']
-                ]
+                
               ]
-              var rn = Math.floor(Math.random() * 10) % 7;
+              var rn = Math.floor(Math.random() * 1) % 7;
               instance.setAvailability(arr[rn]);
             }
           });
         })(jQuery);
     </script>
 
-    <!-- Bootstrap core JavaScript -->
+    <!-- Bootstrap core JavaScript 
+    [
+                  ['2:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['2:00'],
+                  ['2:00'],
+                  ['2:00'],
+                  ['2:00']
+                ],
+                [
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00']
+                ],
+                [
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00']
+                ],
+                [
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00'],
+                  ['4:00']
+                ],
+                [
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['4:00'],
+                  ['3:00']
+                ],
+                [
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['3:00'],
+                  ['4:00']
+                ]-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -552,6 +651,48 @@
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script> 
+
+
+    <!--Apply Leave Validations-->
+    <script type="text/javascript">
+        //jQuery Validation
+        $.validator.setDefaults( {
+            submitHandler: function () {
+                alert( "submitted!" );
+            }
+        } );
+        $( document ).ready( function () {
+            $( "#apply-leave" ).validate( {
+                rules: {
+                    datepickerstart: "required",
+                    datepickerend: "required",
+                    reason: "required"
+                },
+                messages: {
+                    datepickerstart: "Please enter a valid Start Date",
+                    datepickerend: "Please select a valid End Date",
+                    reason: "Please enter a reason for your leave",
+                },
+                errorElement: "em",
+    
+                errorPlacement: function ( error, element ) {
+                    // Add the `invalid-feedback` class to the error element
+                    error.addClass( "invalid-feedback" );
+                    if ( element.prop( "type" ) === "checkbox" ) {
+                        error.insertAfter(element.next( "label" ));
+                    } else {
+                        error.insertAfter(element.next(".pmd-textfield-focused"));
+                    }
+                },
+                highlight: function ( element, errorClass, validClass ) {
+                    $( element ).addClass( "is-invalid" ).removeClass( "is-valid" );
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $( element ).addClass( "is-valid" ).removeClass( "is-invalid" );
+                }
+            } );
+        });
+    </script>
 
 </body>
 
