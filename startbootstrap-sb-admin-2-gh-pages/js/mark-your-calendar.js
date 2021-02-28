@@ -1,9 +1,3 @@
-/*!
- * Author:  Mark Allan B. Meriales
- * Name:    Mark Your Calendar v0.0.1
- * License: MIT License
- */
-
 (function($) {
     // https://stackoverflow.com/questions/563406/add-days-to-javascript-date
     Date.prototype.addDays = function(days) {
@@ -36,7 +30,7 @@
         var onClickNavigator = settings.onClickNavigator;
         var instance = this;
 
-        // kuhanin ang buwan
+        // 
         this.getMonthName = function(idx) {
             return settings.months[idx];
         };
@@ -54,7 +48,7 @@
             return year + '-' + month + '-' + date;
         };
 
-        // Eto ang controller para lumipat ng linggo
+        // 
         // Controller to change 
         this.getNavControl = function() {
             var previousWeekHtml = `<div id="myc-prev-week-container">` + settings.prevHtml + `</div>`;
@@ -76,7 +70,7 @@
             return navHtml;
         };
 
-        // kuhanin at ipakita ang mga araw
+        // 
         this.getDatesHeader = function() {
             var tmp = ``;
             for (i = 0; i < 7; i++) {
@@ -92,7 +86,7 @@
             return ret;
         }
 
-        // kuhanin ang mga pwedeng oras sa bawat araw ng kasalukuyang linggo
+        // Date display
         this.getAvailableTimes = function() {
             var tmp = ``;
             for (i = 0; i < 7; i++) {
@@ -114,7 +108,7 @@
             return tmp
         }
 
-        // i-set ang mga oras na pwedeng ilaan
+        // Multi selection
         this.setAvailability = function(arr) {
             settings.availability = arr;
             render();
@@ -125,7 +119,7 @@
             settings.availability = [[], [], [], [], [], [], []];
         }
 
-        // pag napindot ang nakaraang linggo
+        //Next Week
         this.on('click', '#myc-prev-week', function() {
             settings.startDate = settings.startDate.addDays(-7);
             instance.clearAvailability();
@@ -136,7 +130,7 @@
             }
         });
 
-        // pag napindot ang susunod na linggo
+        // click
         this.on('click', '#myc-next-week', function() {
             settings.startDate = settings.startDate.addDays(7);
             instance.clearAvailability();
@@ -147,7 +141,7 @@
             }
         });
 
-        // pag namili ng oras
+        // Select
         this.on('click', '.myc-available-time', function() {
             var date = $(this).data('date');
             var time = $(this).data('time');
